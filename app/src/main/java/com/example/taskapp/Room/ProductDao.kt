@@ -14,7 +14,7 @@ interface ProductDao {
     suspend fun insertProductToCart(product: ProductType)
     @Query("SELECT * FROM product_cart")
     fun getAllProduct(): Flow<List<ProductType>>
-    @Query("SELECT COUNT(*) FROM item_data")
+    @Query("SELECT COUNT(*) FROM product_cart")
     fun getItemCount(): Flow<Int>
 
 }
